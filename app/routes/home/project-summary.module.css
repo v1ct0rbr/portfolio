@@ -48,7 +48,7 @@
   }
 
   @media (--mediaLaptop) {
-    --textColumnWidth: 40%;
+    --textColumnWidth: 10%;
   }
 
   @media (--mediaTablet) {

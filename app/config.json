@@ -1,11 +1,10 @@
 {
-  "name": "Hamish Williams",
-  "role": "Designer",
-  "disciplines": ["Developer", "Prototyper", "Animator", "Illustrator", "Modder"],
-  "url": "https://hamishw.com",
-  "twitter": "@hamishMW",
-  "figma": "@Hamish",
-  "github": "HamishMW",
-  "repo": "https://github.com/HamishMW/portfolio",
+  "name": "Victor Queiroga",
+  "role": "Developer",
+  "disciplines": ["Cloud Especialist", "Network Admin"],
+  "url": "https://victorqueiroga.com",
+  "linkedin": "victor-queiroga",
+  "github": "v1ct0rbr",
+  "repo": "https://github.com/v1ct0rbr/portfolio",
   "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
 }

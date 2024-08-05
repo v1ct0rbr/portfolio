@@ -1,3 +1,7 @@
+.chat {
+  border-radius: 5px;
+
+}
 .contact {
   --formHeight: 530px;
 

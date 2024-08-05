@@ -1,21 +1,20 @@
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import { json } from '@remix-run/cloudflare';
+import { Form, useActionData, useNavigation } from '@remix-run/react';
+import { useRef } from 'react';
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
 import { Divider } from '~/components/divider';
 import { Footer } from '~/components/footer';
 import { Heading } from '~/components/heading';
 import { Icon } from '~/components/icon';
-import { Input } from '~/components/input';
 import { Section } from '~/components/section';
 import { Text } from '~/components/text';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
 import { useFormInput } from '~/hooks';
-import { useRef } from 'react';
-import { cssProps, msToNum, numToMs } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
-import { Form, useActionData, useNavigation } from '@remix-run/react';
-import { json } from '@remix-run/cloudflare';
-import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import { cssProps, msToNum, numToMs } from '~/utils/style';
 import styles from './contact.module.css';
 
 export const meta = () => {
@@ -126,8 +125,15 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
+            <iframe
+              src="https://tawk.to/chat/5cad4273557d5f68515bc940/1e3prpgc1"
+              width="100%"
+              height="500"
+              title="chat"
+              className="chat"
+            ></iframe>
             {/* Hidden honeypot field to identify bots */}
-            <Input
+            {/* <Input
               className={styles.botkiller}
               label="Name"
               name="name"
@@ -156,7 +162,7 @@ export const Contact = () => {
               name="message"
               maxLength={MAX_MESSAGE_LENGTH}
               {...message}
-            />
+            /> */}
             <Transition
               unmount
               in={!sending && actionData?.errors}
@@ -181,7 +187,7 @@ export const Contact = () => {
                 </div>
               )}
             </Transition>
-            <Button
+            {/* <Button
               className={styles.button}
               data-status={status}
               data-sending={sending}
@@ -193,7 +199,7 @@ export const Contact = () => {
               type="submit"
             >
               Send message
-            </Button>
+            </Button> */}
           </Form>
         )}
       </Transition>
