@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import gamestackTexture2Large from '~/assets/new/deros.png1600x2560.png';
-import gamestackTexture2Placeholder from '~/assets/new/deros.png20x32.png';
-import gamestackTexture2 from '~/assets/new/deros.png800x1280.png';
+import derosTextureLarge from '~/assets/new/deros.png1600x2560.png';
+import derosTexturePlaceholder from '~/assets/new/deros.png20x32.png';
+import derosTexture from '~/assets/new/deros.png800x1280.png';
 import eventCredentialsLarge from '~/assets/new/event_credentials.png__1320x520.png';
 import eventCredentials from '~/assets/new/event_credentials.png__660x260.png';
 import eventCredentialsPlaceholder from '~/assets/new/event_credentials.png_placeholder_33x13.png';
@@ -12,6 +12,10 @@ import pontoSimTexture from '~/assets/new/pontosim02.png800x1280.png';
 import eventCredentials2 from '~/assets/new/event_credentials2.png__660x260.png';
 import eventCredentialsLarge2 from '~/assets/new/event_credentials2.png_large_1320x520.png';
 import eventCredentialsPlaceholder2 from '~/assets/new/event_credentials2.png_placeholder_33x13.png';
+
+import licenceManagerTextureLarge from '~/assets/new/vqlicencemanager_2560x1600.png';
+import licenceManagerTexturePlaceholder from '~/assets/new/vqlicencemanager_32x20.png';
+import licenceManagerTexture from '~/assets/new/vqlicencemanager_1280x800.png';
 
 import { Footer } from '~/components/footer';
 import config from '~/config.json';
@@ -123,8 +127,10 @@ export const Home = () => {
           ],
         }}
       />
+      
       <ProjectSummary
         id="project-2"
+        alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
@@ -148,13 +154,13 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
+     
+     <ProjectSummary
         id="project-3"
-        alternate
-        sectionRef={projectThree}
+                sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Service control"
+        title="IT Service control"
         description="Development of a web app for service control. It is used to control the it services of the company like the servers, the computers, the network and the services. "
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
@@ -163,8 +169,8 @@ export const Home = () => {
           alt: 'deros app',
           textures: [
             {
-              srcSet: `${gamestackTexture2} 800w , ${gamestackTexture2Large} 1920w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${derosTexture} 800w , ${derosTextureLarge} 1920w`,
+              placeholder: derosTexturePlaceholder,
             },
           ],
         }}
@@ -174,17 +180,17 @@ export const Home = () => {
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Licence manager"
+        description="Development of a web app for licence manager. It is used to control the licences of software of the company. "
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Licence manager',
           textures: [
             {
-              srcSet: `${pontoSimTexture} 800w, ${pontoSimTextureLarge} 1920w`,
-              placeholder: pontoSimTexturePlaceholder,
+              srcSet: `${licenceManagerTexture} 800w, ${licenceManagerTextureLarge} 1920w`,
+              placeholder: licenceManagerTexturePlaceholder,
             },
           ],
         }}
