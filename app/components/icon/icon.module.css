@@ -1,5 +1,7 @@
 @layer components {
   .icon {
     fill: currentColor;
+    text-decoration: none;
   }
+  
 }

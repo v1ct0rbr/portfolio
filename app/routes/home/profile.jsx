@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
-import profileImgLarge from '~/assets/profile-large.jpg';
-import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
-import profileImg from '~/assets/profile.jpg';
+import profileImgLarge from '~/assets/new/profile/perfil_large.jpeg';
+import profileImgPlaceholder from '~/assets/new/profile/perfil_placeholder.jpeg';
+import profileImg from '~/assets/new/profile/perfil_normal.jpeg';
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
 import { Divider } from '~/components/divider';

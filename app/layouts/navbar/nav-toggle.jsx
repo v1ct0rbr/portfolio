@@ -17,7 +17,7 @@ export const NavToggle = ({ menuOpen, ...rest }) => {
           className={styles.icon}
           data-close={true}
           data-open={menuOpen}
-          icon="close"
+          icon="Close"
         />
       </div>
     </Button>

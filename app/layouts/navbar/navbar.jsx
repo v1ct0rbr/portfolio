@@ -216,7 +216,8 @@ const NavbarIcons = ({ desktop }) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon className={styles.navIcon} icon={icon} />
+        {/* <Icon className={styles.navIcon} icon={icon} /> */}
+        <Icon iconName={icon} size={24} />
       </a>
     ))}
   </div>
