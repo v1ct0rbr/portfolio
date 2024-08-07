@@ -13,9 +13,9 @@ import eventCredentials2 from '~/assets/new/event_credentials2.png__660x260.png'
 import eventCredentialsLarge2 from '~/assets/new/event_credentials2.png_large_1320x520.png';
 import eventCredentialsPlaceholder2 from '~/assets/new/event_credentials2.png_placeholder_33x13.png';
 
+import licenceManagerTexture from '~/assets/new/vqlicencemanager_1280x800.png';
 import licenceManagerTextureLarge from '~/assets/new/vqlicencemanager_2560x1600.png';
 import licenceManagerTexturePlaceholder from '~/assets/new/vqlicencemanager_32x20.png';
-import licenceManagerTexture from '~/assets/new/vqlicencemanager_1280x800.png';
 
 import { Footer } from '~/components/footer';
 import config from '~/config.json';
@@ -114,7 +114,7 @@ export const Home = () => {
         description="Development of a Electron app for timekeeping control. The app is build in Spring Boot and bootstrap. 
         The app is used to control the timekeeping of the employees of the company."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/pontosim"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -127,7 +127,7 @@ export const Home = () => {
           ],
         }}
       />
-      
+
       <ProjectSummary
         id="project-2"
         alternate
@@ -154,10 +154,10 @@ export const Home = () => {
           ],
         }}
       />
-     
-     <ProjectSummary
+
+      <ProjectSummary
         id="project-3"
-                sectionRef={projectThree}
+        sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="IT Service control"

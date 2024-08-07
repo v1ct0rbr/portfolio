@@ -126,11 +126,11 @@ export const Contact = () => {
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
             <iframe
+              className={styles.chat}
               src="https://tawk.to/chat/5cad4273557d5f68515bc940/1e3prpgc1"
               width="100%"
-              height="500"
+              height="600"
               title="chat"
-              className="chat"
             ></iframe>
             {/* Hidden honeypot field to identify bots */}
             {/* <Input

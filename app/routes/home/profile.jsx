@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import profileImgLarge from '~/assets/new/profile/perfil_large.jpeg';
-import profileImgPlaceholder from '~/assets/new/profile/perfil_placeholder.jpeg';
 import profileImg from '~/assets/new/profile/perfil_normal.jpeg';
+import profileImgPlaceholder from '~/assets/new/profile/perfil_placeholder.jpeg';
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
 import { Divider } from '~/components/divider';
@@ -22,15 +22,14 @@ const ProfileText = ({ visible, titleId }) => (
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I’m Victor, currently I live in João Pessoa working as a System Analist at{' '}
-      <Link href="https://der.pb.gov.br">DERPB</Link>. My projects include webdeveloper, and cloud integrations
-      .Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      <Link href="https://der.pb.gov.br">DERPB</Link>. My projects include webdeveloper,
+      and cloud integrations .Being comfortable with code allows me to rapidly prototype
+      and validate experiences. If you’re interested in the tools and software I use check
+      out my <Link href="/uses">uses page</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to play video games and travelling {' '}
-      .I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      In my spare time I like to play video games and travelling .I’m always down for
+      hearing about new projects, so feel free to drop me a line.
     </Text>
   </Fragment>
 );
@@ -60,7 +59,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 className={styles.button}
                 data-visible={visible}
                 href="/contact"
-                icon="send"
+                icon="SendHorizontal"
               >
                 Send me a message
               </Button>

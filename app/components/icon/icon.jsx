@@ -1,9 +1,8 @@
 //import { classes } from '~/utils/style';
-//import styles from './icon.module.css';
 //import { forwardRef } from 'react';
 //import sprites from './icons.svg';
 import { icons } from 'lucide-react';
-
+import { classes } from '~/utils/style';
 
 /* export const Icon = forwardRef(({ icon, className, size, ...rest }, ref) => {
   return (
@@ -20,18 +19,15 @@ import { icons } from 'lucide-react';
   );
 }); */
 
-export const Icon = ({ iconName, size = 24}) => {
+export const Icon = ({ icon, className, size = 24, ...rest }) => {
   // Verifica se o ícone solicitado existe na biblioteca
-  const IconComponent = icons[iconName];
+  const IconComponent = icons[icon];
 
   // Se o ícone não existir, exibe uma mensagem ou um ícone padrão
   if (!IconComponent) {
-    console.error(`Ícone "${iconName}" não encontrado.`);
+    console.error(`Ícone "${icon}" não encontrado.`);
     return <div>Ícone não encontrado</div>;
   }
 
-  return( 
-    <IconComponent size={size} />
-  );
+  return <IconComponent size={size} className={classes(className)} {...rest} />;
 };
-

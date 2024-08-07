@@ -1,1 +1,1 @@
-export { Slice as default, meta } from './slice';
+export { PontoSim as default, meta } from './pontosim';

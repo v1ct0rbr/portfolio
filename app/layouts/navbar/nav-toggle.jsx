@@ -12,7 +12,7 @@ export const NavToggle = ({ menuOpen, ...rest }) => {
       {...rest}
     >
       <div className={styles.inner}>
-        <Icon className={styles.icon} data-menu={true} data-open={menuOpen} icon="menu" />
+        <Icon className={styles.icon} data-menu={true} data-open={menuOpen} icon="Menu" />
         <Icon
           className={styles.icon}
           data-close={true}
