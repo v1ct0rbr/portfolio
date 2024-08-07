@@ -22,6 +22,9 @@ import config from '~/config.json';
 import styles from './root.module.css';
 import './reset.module.css';
 import './global.module.css';
+/* import './globals.css'; */
+
+
 
 export const links = () => [
   {
@@ -112,6 +115,7 @@ export default function App() {
           content={theme === 'light' ? 'light dark' : 'dark light'}
         />
         <style dangerouslySetInnerHTML={{ __html: themeStyles }} />
+        
         <Meta />
         <Links />
         <link rel="canonical" href={canonicalUrl} />

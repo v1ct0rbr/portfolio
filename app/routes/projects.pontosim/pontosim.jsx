@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import sliceAnnotationLarge from '~/assets/slice-annotation-large.png';
 import sliceAnnotationPlaceholder from '~/assets/slice-annotation-placeholder.png';
 import sliceAnnotation from '~/assets/slice-annotation.png';
@@ -21,6 +22,14 @@ import sliceSidebarLayers from '~/assets/slice-sidebar-layers.png';
 import sliceSlidesLarge from '~/assets/slice-slides-large.jpg';
 import sliceSlidesPlaceholder from '~/assets/slice-slides-placeholder.jpg';
 import sliceSlides from '~/assets/slice-slides.jpg';
+
+import pontosimBackground from '~/assets/new/projects/pontosim/pontosim_background.png';
+import pontoSimApp from '~/assets/new/projects/pontosim/pontosim_app_image.png';
+import pontoSimMobile01 from '~/assets/new/projects/pontosim/pontosim_mobile_image_analogico.png';
+import pontoSimMobile02 from '~/assets/new/projects/pontosim/pontosim_mobile_image_digital.png';
+
+import pontoSimApp2 from '~/assets/new/projects/pontosim/pontosim_app_image2.png';
+
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import {
@@ -35,27 +44,26 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from '~/layouts/project';
-import { Fragment } from 'react';
-import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
-import styles from './slice.module.css';
+import { media } from '~/utils/style';
+import styles from './pontosim.module.css';
 
-const title = 'Biomedical image collaboration';
+const title = 'Timekeeping system';
 const description =
-  'This project involved designing a better way for biomedical educators and learners to annotate digital slides together.';
-const roles = ['User Research', 'UX Design', 'Interface Design'];
+  'Timekeeping system created to record the entry and exit of employees, monitor hours worked, and generate reports to facilitate salary calculation and benefits administration.';
+const roles = ['Employee attendance control', 'Location validation', 'Reporting', 'Decentralized management'];
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
 };
 
-export const Slice = () => {
+export const PontoSim = () => {
   return (
     <Fragment>
       <ProjectContainer className={styles.slice}>
         <ProjectBackground
           src={sliceBackground}
-          srcSet={`${sliceBackground} 1280w, ${sliceBackgroundLarge} 2560w`}
+          srcSet={`${pontosimBackground} 1280w, ${pontosimBackground} 2560w`}
           width={1280}
           height={800}
           placeholder={sliceBackgroundPlaceholder}
@@ -70,7 +78,7 @@ export const Slice = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={`${sliceApp} 800w, ${sliceAppLarge} 1920w`}
+              srcSet={`${pontoSimApp} 800w, ${pontosimBackground} 1920w`}
               width={800}
               height={500}
               placeholder={sliceAppPlaceholder}
@@ -82,22 +90,20 @@ export const Slice = () => {
         <ProjectSection>
           <ProjectSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
-              <ProjectSectionHeading>Bringing it together</ProjectSectionHeading>
+              <ProjectSectionHeading>Purposes</ProjectSectionHeading>
               <ProjectSectionText>
-                Teachers needed a better way to create collaborative group activities by
-                annotating slides on Slice. Before starting this project, a layer could
-                only be annotated by a single user, making it difficult for learners to
-                work together.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
-              </ProjectSectionText>
+                <ul>
+                  <li>Efficiency: Automate and simplify the time recording process, reducing errors and saving time.</li>
+                  <li>Compliance: Ensure compliance with labor laws and internal company policies.</li>
+                  <li>Transparency: Provide clear visibility into hours worked, promoting fairness and trust between employees and employers.</li>
+                  <li>Management: Improve control and management of human resources through accurate, real-time data.</li>
+                </ul>
+              </ProjectSectionText>              
             </div>
             <div className={styles.sidebarImages}>
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${sliceSidebarLayers} 350w, ${sliceSidebarLayersLarge} 700w`}
+                srcSet={`${pontoSimMobile01} 350w, ${pontoSimMobile01} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarLayersPlaceholder}
@@ -106,7 +112,7 @@ export const Slice = () => {
               />
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${sliceSidebarAnnotations} 350w, ${sliceSidebarAnnotationsLarge} 700w`}
+                srcSet={`${pontoSimMobile02} 350w, ${pontoSimMobile02} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarAnnotationsPlaceholder}
@@ -121,16 +127,15 @@ export const Slice = () => {
             <ProjectTextRow>
               <ProjectSectionHeading>Improving the experience</ProjectSectionHeading>
               <ProjectSectionText>
-                A problem we heard about often form users was that it was difficult to
-                find images they had previously seen or worked on. To solve this we added
-                a new tab that lists all previously annotated slides. In addition, we
-                added the ability to favorite slides, so if users find an interesting
-                slide they want to annotate later, they can easily save it to their
-                account.
+              Purposes:
+Efficiency: Automate and simplify the time recording process, reducing errors and saving time.
+Compliance: Ensure compliance with labor laws and internal company policies.
+Transparency: Provide clear visibility into hours worked, promoting fairness and trust between employees and employers.
+Management: Improve control and management of human resources through accurate, real-time data.
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
-              srcSet={`${sliceSlides} 800w, ${sliceSlidesLarge} 1920w`}
+              srcSet={`${pontoSimApp2} 800w, ${pontoSimApp2} 1920w`}
               width={800}
               height={500}
               placeholder={sliceSlidesPlaceholder}
@@ -165,13 +170,12 @@ export const Slice = () => {
               </div>
             </div>
             <div className={styles.gridText}>
-              <ProjectSectionHeading>Meaningful details</ProjectSectionHeading>
-              <ProjectSectionText>
-                Marking and annotating areas on high resolution biomedical images is the
-                core experience of the app, and it was easy to get lost or lose sense of
-                scale when zooming in on details. Adding measurements for the perimeter
-                and area of an annotation both helped to communicate the overall scale of
-                the image and how large the annotated feature is in comparison.
+              <ProjectSectionHeading>Previous Problems Faced:</ProjectSectionHeading>
+              <ProjectSectionText>             
+
+Inconsistencies and Fraud: Manual or mechanical methods were susceptible to fraud and inconsistencies, such as erroneous records or clocking by third parties.
+Data Loss: Undigitized physical documents or records were easily lost or damaged, resulting in a lack of historical data.
+Complexity in Management: Manual administration of schedules, shifts and payroll calculations was complex and prone to errors. Furthermore, it was difficult to establish more comprehensive control in terms of location, aiming for its use in several locations.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>

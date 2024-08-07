@@ -5,9 +5,9 @@ import derosTexture from '~/assets/new/deros.png800x1280.png';
 import eventCredentialsLarge from '~/assets/new/event_credentials.png__1320x520.png';
 import eventCredentials from '~/assets/new/event_credentials.png__660x260.png';
 import eventCredentialsPlaceholder from '~/assets/new/event_credentials.png_placeholder_33x13.png';
-import pontoSimTextureLarge from '~/assets/new/pontosim02.png1600x2560.png';
-import pontoSimTexturePlaceholder from '~/assets/new/pontosim02.png20x32.png';
-import pontoSimTexture from '~/assets/new/pontosim02.png800x1280.png';
+import pontoSimTextureLarge from '~/assets/new/projects/pontosim/pontosim02.png1600x2560.png';
+import pontoSimTexturePlaceholder from '~/assets/new/projects/pontosim/pontosim02.png20x32.png';
+import pontoSimTexture from '~/assets/new/projects/pontosim/pontosim02.png800x1280.png';
 
 import eventCredentials2 from '~/assets/new/event_credentials2.png__660x260.png';
 import eventCredentialsLarge2 from '~/assets/new/event_credentials2.png_large_1320x520.png';

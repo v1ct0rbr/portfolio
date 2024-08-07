@@ -7,6 +7,9 @@ import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { resolveSrcFromSrcSet } from '~/utils/image';
 import { classes, cssProps, numToMs } from '~/utils/style';
 import styles from './image.module.css';
+import { Skeleton } from '../ui/skeleton';
+import { Separator } from '../ui/separator';
+import { cn } from '~/utils';
 
 export const Image = ({
   className,
@@ -173,7 +176,7 @@ const ImageElements = ({
         </Fragment>
       )}
       {!isVideo && (
-        <img
+       /*  <img
           className={styles.element}
           data-loaded={loaded}
           data-cover={cover}
@@ -186,10 +189,14 @@ const ImageElements = ({
           alt={alt}
           sizes={sizes}
           {...rest}
-        />
+        /> */
+        <Skeleton ref={placeholderRef} className={cn(`w-[${width}px]`, `h-[${height}px]`)}></Skeleton>
+
+        
       )}
       {showPlaceholder && (
-        <img
+       
+       /*  <img
           aria-hidden
           className={styles.placeholder}
           data-loaded={loaded}
@@ -204,7 +211,9 @@ const ImageElements = ({
           loading="lazy"
           alt=""
           role="presentation"
-        />
+        /> */
+        <Skeleton ref={placeholderRef} className={cn(`w-[${width}px]`, `h-[${height}px]`)}></Skeleton>
+
       )}
     </div>
   );
