@@ -1,3 +1,4 @@
+import { forwardRef, useRef } from 'react';
 import { Button } from '~/components/button';
 import { Heading } from '~/components/heading';
 import { Image } from '~/components/image';
@@ -6,7 +7,6 @@ import { Text } from '~/components/text';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
 import { useParallax } from '~/hooks';
-import { forwardRef, useRef } from 'react';
 import { classes, cssProps, msToNum, numToMs } from '~/utils/style';
 import styles from './project.module.css';
 

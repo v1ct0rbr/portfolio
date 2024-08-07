@@ -1,15 +1,13 @@
+import { useReducedMotion } from 'framer-motion';
+import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { Button } from '~/components/button';
 import { Icon } from '~/components/icon';
 import { useTheme } from '~/components/theme-provider';
-import { useReducedMotion } from 'framer-motion';
 import { useHasMounted, useInViewport } from '~/hooks';
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { resolveSrcFromSrcSet } from '~/utils/image';
 import { classes, cssProps, numToMs } from '~/utils/style';
+import { Skeleton } from '../skeleton/skeleton';
 import styles from './image.module.css';
-import { Skeleton } from '../ui/skeleton';
-import { Separator } from '../ui/separator';
-import { cn } from '~/utils';
 
 export const Image = ({
   className,
@@ -176,7 +174,7 @@ const ImageElements = ({
         </Fragment>
       )}
       {!isVideo && (
-       /*  <img
+        <img
           className={styles.element}
           data-loaded={loaded}
           data-cover={cover}
@@ -189,31 +187,26 @@ const ImageElements = ({
           alt={alt}
           sizes={sizes}
           {...rest}
-        /> */
-        <Skeleton ref={placeholderRef} className={cn(`w-[${width}px]`, `h-[${height}px]`)}></Skeleton>
-
-        
+        />
       )}
       {showPlaceholder && (
-       
-       /*  <img
-          aria-hidden
-          className={styles.placeholder}
-          data-loaded={loaded}
-          data-cover={cover}
-          style={cssProps({ delay: numToMs(delay) })}
-          ref={placeholderRef}
-          src={placeholder}
-          width={width}
-          height={height}
-          onTransitionEnd={() => setShowPlaceholder(false)}
-          decoding="async"
-          loading="lazy"
-          alt=""
-          role="presentation"
-        /> */
-        <Skeleton ref={placeholderRef} className={cn(`w-[${width}px]`, `h-[${height}px]`)}></Skeleton>
-
+        // <img
+        //   aria-hidden
+        //   className={styles.placeholder}
+        //   data-loaded={loaded}
+        //   data-cover={cover}
+        //   style={cssProps({ delay: numToMs(delay) })}
+        //   ref={placeholderRef}
+        //   src={placeholder}
+        //   width={width}
+        //   height={height}
+        //   onTransitionEnd={() => setShowPlaceholder(false)}
+        //   decoding="async"
+        //   loading="lazy"
+        //   alt=""
+        //   role="presentation"
+        // />
+        <Skeleton width={width} height={height} delay={delay} />
       )}
     </div>
   );

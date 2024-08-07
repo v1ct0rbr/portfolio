@@ -1,10 +1,8 @@
 module.exports = {
   plugins: {
     '@csstools/postcss-global-data': {
-      files: ['app/globals.css'],
+      files: ['app/global.module.css'],
     },
     'postcss-custom-media': {},
-    tailwindcss: {},
-    autoprefixer: {},
   },
 };

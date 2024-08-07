@@ -110,9 +110,11 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="electronic timekeeping control"
-        description="Development of a Electron app for timekeeping control. The app is build in Spring Boot and bootstrap. 
-        The app is used to control the timekeeping of the employees of the company."
+        title="Sistema de ponto Eletrônico"
+        // description="Development of a Electron app for timekeeping control. The app is build in Spring Boot and bootstrap.
+        // The app is used to control the timekeeping of the employees of the company."
+        description="Desenvolvimento de um aplicativo Electron para controle de ponto eletrônico. O aplicativo é construído em Spring Boot e bootstrap. 
+        O aplicativo é usado para controlar o ponto dos funcionários da empresa."
         buttonText="View project"
         buttonLink="/projects/pontosim"
         model={{
