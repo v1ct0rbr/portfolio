@@ -31,9 +31,12 @@ import { baseMeta } from '~/utils/meta';
 import { media } from '~/utils/style';
 import styles from './pontosim.module.css';
 
+
 const title = 'Timekeeping system';
 const description =
-  'Timekeeping system created to record the entry and exit of employees, monitor hours worked, and generate reports to facilitate salary calculation and benefits administration.';
+  'Com uma interface intuitiva, o sistema facilita a marcação de entradas e saídas, automatiza cálculos de horas trabalhadas, \
+  e gera relatórios detalhados para a gestão. Além disso, oferece integração com outros sistemas de RH, suporte a múltiplos dispositivos,\
+   e funcionalidades avançadas como a geolocalização e o reconhecimento facial, garantindo segurança e conformidade com as regulamentações trabalhistas.';
 const roles = [
   'Employee attendance control',
   'Location validation',
@@ -156,6 +159,7 @@ export const PontoSim = () => {
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
+           
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>

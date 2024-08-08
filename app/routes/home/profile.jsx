@@ -18,18 +18,18 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="Olá" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Victor, currently I live in João Pessoa working as a System Analist at{' '}
-      <Link href="https://der.pb.gov.br">DERPB</Link>. My projects include webdeveloper,
-      and cloud integrations .Being comfortable with code allows me to rapidly prototype
-      and validate experiences. If you’re interested in the tools and software I use check
-      out my <Link href="/uses">uses page</Link>.
+    Sou Victor, atualmente moro em João Pessoa e trabalho como Analista de Sistemas no <Link href="https://der.pb.gov.br">DERPB</Link>. 
+    Meus projetos incluem desenvolvimento web e integrações em nuvem. 
+    Estar confortável com o código me permite prototipar e validar experiências rapidamente. 
+    Se você estiver interessado nas ferramentas e softwares que uso, confira alguns de <Link href="/uses">meus projetos</Link>.
+   
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to play video games and travelling .I’m always down for
-      hearing about new projects, so feel free to drop me a line.
+    No meu tempo livre, gosto de jogar videogames e viajar. 
+    Estou sempre aberto a ouvir sobre novos projetos, então sinta-se à vontade para me mandar uma mensagem.
     </Text>
   </Fragment>
 );

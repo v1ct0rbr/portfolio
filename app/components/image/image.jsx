@@ -6,8 +6,9 @@ import { useTheme } from '~/components/theme-provider';
 import { useHasMounted, useInViewport } from '~/hooks';
 import { resolveSrcFromSrcSet } from '~/utils/image';
 import { classes, cssProps, numToMs } from '~/utils/style';
-import { Skeleton } from '../skeleton/skeleton';
+import { MySkeleton} from '../skeleton/MySkeleton';
 import styles from './image.module.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 export const Image = ({
   className,
@@ -17,7 +18,7 @@ export const Image = ({
   raised,
   src: baseSrc,
   srcSet,
-  placeholder,
+  
   ...rest
 }) => {
   const [loaded, setLoaded] = useState(false);
@@ -28,6 +29,7 @@ export const Image = ({
 
   const onLoad = useCallback(() => {
     setLoaded(true);
+    
   }, []);
 
   return (
@@ -48,7 +50,7 @@ export const Image = ({
         reveal={reveal}
         src={src}
         srcSet={srcSet}
-        placeholder={placeholder}
+        
         {...rest}
       />
     </div>
@@ -149,6 +151,7 @@ const ImageElements = ({
       data-visible={inViewport || loaded}
       style={cssProps({ delay: numToMs(delay + 1000) })}
     >
+      
       {isVideo && hasMounted && (
         <Fragment>
           <video
@@ -163,6 +166,8 @@ const ImageElements = ({
             src={videoSrc}
             aria-label={alt}
             ref={videoRef}
+            style={{display: 'none'}}
+            onLoadedData={(e) => { setShowPlaceholder(false); e.currentTarget.style.display = 'block';}}
             {...rest}
           />
           {!noPauseButton && (
@@ -173,12 +178,33 @@ const ImageElements = ({
           )}
         </Fragment>
       )}
+      {showPlaceholder && (
+         /*  <img
+           aria-hidden
+           className={styles.placeholder}
+           data-loaded={loaded}
+           data-cover={cover}
+           style={cssProps({ delay: numToMs(delay) })}
+           ref={placeholderRef}
+           src={placeholder}
+           width={width}
+           height={height}
+           onTransitionEnd={() => setShowPlaceholder(false)}
+           decoding="async"
+           loading="lazy"
+           alt=""
+           role="presentation"
+         />  */
+       
+         <MySkeleton ref={placeholderRef} styles={styles.placeholder}   />
+      )}
+      
       {!isVideo && (
         <img
           className={styles.element}
           data-loaded={loaded}
           data-cover={cover}
-          onLoad={onLoad}
+          style={cssProps({ delay: numToMs(delay) })}
           decoding="async"
           src={showFullRes ? src : undefined}
           srcSet={showFullRes ? srcSet : undefined}
@@ -186,28 +212,24 @@ const ImageElements = ({
           height={height}
           alt={alt}
           sizes={sizes}
+          loading="lazy"
+          onTransitionEnd={() => setShowPlaceholder(false)}
+          onLoad={(e) => {
+            onLoad(e); // Chamando onLoad original se existir
+            setShowPlaceholder(false);
+          }}
+          
+          
           {...rest}
         />
+        
       )}
-      {showPlaceholder && (
-        // <img
-        //   aria-hidden
-        //   className={styles.placeholder}
-        //   data-loaded={loaded}
-        //   data-cover={cover}
-        //   style={cssProps({ delay: numToMs(delay) })}
-        //   ref={placeholderRef}
-        //   src={placeholder}
-        //   width={width}
-        //   height={height}
-        //   onTransitionEnd={() => setShowPlaceholder(false)}
-        //   decoding="async"
-        //   loading="lazy"
-        //   alt=""
-        //   role="presentation"
-        // />
-        <Skeleton width={width} height={height} delay={delay} />
-      )}
+        
+        
+      
+     
+      
+
     </div>
   );
 };
