@@ -113,8 +113,7 @@ export const Home = () => {
         title="Sistema de ponto Eletrônico"
         // description="Development of a Electron app for timekeeping control. The app is build in Spring Boot and bootstrap.
         // The app is used to control the timekeeping of the employees of the company."
-        description="Desenvolvimento de um aplicativo Electron para controle de ponto eletrônico. O aplicativo é construído em Spring Boot e bootstrap. 
-        O aplicativo é usado para controlar o ponto dos funcionários da empresa."
+        description="Desenvolvimento de uma aplicação para controle de ponto eletrônico. Foi construído para controlar o ponto dos funcionários da empresa."
         buttonText="View project"
         buttonLink="/projects/pontosim"
         model={{
@@ -139,7 +138,7 @@ export const Home = () => {
         title="Event credentials"
         description="Development of a web app for event credentials. It is used to control the credentials of the event. "
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/pass-in-web"
         model={{
           type: 'phone',
           alt: 'Smart Sparrow lesson builder',

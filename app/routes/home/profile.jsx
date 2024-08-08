@@ -18,10 +18,10 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Olá" start={visible} delay={500} />
+      <DecoderText text="Sobre mim" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-    Sou Victor, atualmente moro em João Pessoa e trabalho como Analista de Sistemas no <Link href="https://der.pb.gov.br">DERPB</Link>. 
+    Olá. Me chamo Victor, atualmente moro em João Pessoa e trabalho como Analista de Sistemas no <Link href="https://der.pb.gov.br">DERPB</Link>. 
     Meus projetos incluem desenvolvimento web e integrações em nuvem. 
     Estar confortável com o código me permite prototipar e validar experiências rapidamente. 
     Se você estiver interessado nas ferramentas e softwares que uso, confira alguns de <Link href="/uses">meus projetos</Link>.
@@ -61,7 +61,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 href="/contact"
                 icon="SendHorizontal"
               >
-                Send me a message
+                Envie-me uma mensagem
               </Button>
             </div>
             <div className={styles.column}>
@@ -73,7 +73,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   collapseDelay={1000}
                 />
                 <div className={styles.tagText} data-visible={visible}>
-                  About me
+                  Sobre mim
                 </div>
               </div>
               <div className={styles.image}>

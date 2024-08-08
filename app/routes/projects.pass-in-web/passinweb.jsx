@@ -6,10 +6,16 @@ import sliceSidebarAnnotationsPlaceholder from '~/assets/slice-sidebar-annotatio
 import sliceSidebarLayersPlaceholder from '~/assets/slice-sidebar-layers-placeholder.png';
 import sliceSlidesPlaceholder from '~/assets/slice-slides-placeholder.jpg';
 
-import pontoSimApp from '~/assets/new/projects/pontosim/pontosim_app_image.png';
+/* import pontoSimApp from '~/assets/new/projects/pontosim/pontosim_app_image.png';
 import pontosimBackground from '~/assets/new/projects/pontosim/pontosim_background.png';
 import pontoSimMobile01 from '~/assets/new/projects/pontosim/pontosim_mobile_image_analogico.png';
-import pontoSimMobile02 from '~/assets/new/projects/pontosim/pontosim_mobile_image_digital.png';
+import pontoSimMobile02 from '~/assets/new/projects/pontosim/pontosim_mobile_image_digital.png'; */
+
+import passInWebApp from '~/assets/new/projects/pass-in-web/img02.png';
+import passInWebAppCheckin from '~/assets/new/projects/pass-in-web/img03.png';
+import passInWebBackground from '~/assets/new/projects/pass-in-web/img02.png';
+import passInWebMobile01 from '~/assets/new/projects/pass-in-web/app02.png';
+import passInWebMobile02 from '~/assets/new/projects/pass-in-web/app01.png';
 
 import pontoSimApp2 from '~/assets/new/projects/pontosim/pontosim_app_image2.png';
 
@@ -29,32 +35,32 @@ import {
 } from '~/layouts/project';
 import { baseMeta } from '~/utils/meta';
 import { media } from '~/utils/style';
-import styles from './pontosim.module.css';
+import styles from './passinweb.module.css';
 
 
-const title = 'Sistema de ponto eletrônico';
-const description =
-  'Com uma interface intuitiva, o sistema facilita a marcação de entradas e saídas, automatiza cálculos de horas trabalhadas, \
-  e gera relatórios detalhados para a gestão. Além disso, oferece integração com outros sistemas de RH, suporte a múltiplos dispositivos,\
-   e funcionalidades avançadas como a geolocalização e o reconhecimento facial, garantindo segurança e conformidade com as regulamentações trabalhistas.';
+const title = 'Sistema de controle de credenciamento';
+const description =' Com uma interface intuitiva, o sistema permite o controle de acesso a eventos com o cadastro e check-in de participantes ';
+
+
+
 const roles = [
-  'Employee attendance control',
-  'Location validation',
-  'Reporting',
-  'Decentralized management',
+  'Cadastro e crachá virtual',
+  'Chegada com check-in',
+  'Listagem e execlusão de participantes',
+  'Listagem paginada',
 ];
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
 };
 
-export const PontoSim = () => {
+export const PassInWeb = () => {
   return (
     <Fragment>
       <ProjectContainer className={styles.slice}>
         <ProjectBackground
           src={sliceBackground}
-          srcSet={`${pontosimBackground} 1280w, ${pontosimBackground} 2560w`}
+          srcSet={`${passInWebBackground} 1280w, ${passInWebBackground} 2560w`}
           width={1280}
           height={800}
           placeholder={sliceBackgroundPlaceholder}
@@ -69,11 +75,11 @@ export const PontoSim = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              srcSet={`${pontoSimApp} 800w, ${pontosimBackground} 1920w`}
+              srcSet={`${passInWebApp} 800w, ${passInWebApp} 1920w`}
               width={800}
               height={500}
               placeholder={sliceAppPlaceholder}
-              alt="Sistema de ponto eletrônico"
+              alt="Sistema de controle de credenciamento"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -85,49 +91,41 @@ export const PontoSim = () => {
               <ProjectSectionText>
                 <ul>
                   <li>
-                    {/* Efficiency: Automate and simplify the time recording process, reducing
-                    errors and saving time. */}
-                    Eficiência: Automatizar e simplificar o processo de registro de ponto,
-                    reduzindo erros e economizando tempo.
+                    Facilitar o controle de acesso a eventos, com um sistema de credenciamento
                   </li>
                   <li>
-                    {/* Compliance: Ensure compliance with labor laws and internal company
-                    policies. */}
-                    Conformidade: Garantir a conformidade com as leis trabalhistas e
-                    políticas internas da empresa.
+                    Permitir o cadastro de participantes e a emissão de crachás virtuais
                   </li>
                   <li>
-                    {/* Transparency: Provide clear visibility into hours worked, promoting
-                    fairness and trust between employees and employers. */}
-                    Transparência: Fornecer visibilidade clara das horas trabalhadas,
-                    promovendo justiça e confiança entre funcionários e empregadores.
+                    Realizar o check-in de participantes, com listagem e exclusão de participantes
                   </li>
                   <li>
-                    {/* Management: Improve control and management of human resources through
-                    accurate, real-time data. */}
-                    Gestão: Melhorar o controle e a gestão de recursos humanos por meio de
-                    dados precisos e em tempo real.
+                    Listagem paginada de participantes, com busca e filtros
                   </li>
+
+
+                 
                 </ul>
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
+             
               <Image
                 className={styles.sidebarImage}
-                srcSet={`${pontoSimMobile01} 350w, ${pontoSimMobile01} 700w`}
-                width={350}
-                height={750}
-                placeholder={sliceSidebarLayersPlaceholder}
-                alt="The layers sidebar design, now with user profiles."
-                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
-              />
-              <Image
-                className={styles.sidebarImage}
-                srcSet={`${pontoSimMobile02} 350w, ${pontoSimMobile02} 700w`}
+                srcSet={`${passInWebMobile02} 350w, ${passInWebMobile02} 700w`}
                 width={350}
                 height={750}
                 placeholder={sliceSidebarAnnotationsPlaceholder}
                 alt="Multiple user annotations on a shared layer."
+                sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
+              />
+               <Image
+                className={styles.sidebarImage}
+                srcSet={`${passInWebMobile01} 350w, ${passInWebMobile01} 700w`}
+                width={350}
+                height={750}
+                placeholder={sliceSidebarLayersPlaceholder}
+                alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -137,22 +135,22 @@ export const PontoSim = () => {
           <ProjectSectionContent>
             <ProjectTextRow>
               <ProjectSectionHeading>
-                Problemas Anteriores Enfrentados:
+                  Tecnologias
               </ProjectSectionHeading>
               <ProjectSectionText>
-                Inconsistências e Fraudes: Métodos manuais ou mecânicos eram suscetíveis a
-                fraudes e inconsistências, como registros errôneos ou marcações de ponto
-                por terceiros. Perda de Dados: Documentos físicos ou registros não
-                digitalizados eram facilmente perdidos ou danificados, resultando em falta
-                de dados históricos. Complexidade na Gestão: A administração manual de
-                horários, turnos e cálculos de folha de pagamento era complexa e propensa
-                a erros. Falta de Conformidade: Dificuldades em garantir que todos os
-                registros de ponto estivessem em conformidade com a legislação trabalhista
-                vigente.
+                <ul>
+                  <li>React</li>
+                  <li>React Native para produção de apps</li>
+                  <li>Node.js</li>
+                  <li>Fastify</li>
+                  <li>Shadcn</li>
+                  <li>Taiwind Css</li>
+                  
+                </ul>
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
-              srcSet={`${pontoSimApp2} 800w, ${pontoSimApp2} 1920w`}
+              srcSet={`${passInWebAppCheckin} 800w, ${passInWebAppCheckin} 1920w`}
               width={800}
               height={500}
               placeholder={sliceSlidesPlaceholder}
