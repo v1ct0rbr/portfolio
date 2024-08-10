@@ -1,3 +1,5 @@
 kv_namespaces = [
   { id = "MY_KV", binding="MY_KV" }
 ]
+
+compatibility_date="2024-08-10"
