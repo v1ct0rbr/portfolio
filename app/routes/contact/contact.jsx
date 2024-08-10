@@ -127,7 +127,7 @@ export const Contact = () => {
             />
             <iframe
               className={styles.chat}
-              src="https://tawk.to/chat/5cad4273557d5f68515bc940/1e3prpgc1"
+              src="https://tawk.to/chat/5cad4273557d5f68515bc940/default"
               width="100%"
               height="600"
               title="chat"

@@ -164,7 +164,7 @@ export const Home = () => {
         title="IT Service control"
         description="Development of a web app for service control. It is used to control the it services of the company like the servers, the computers, the network and the services. "
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/sosystem"
         model={{
           type: 'laptop',
           alt: 'deros app',
