@@ -13,10 +13,6 @@ import eventCredentials2 from '~/assets/new/event_credentials2.png__660x260.png'
 import eventCredentialsLarge2 from '~/assets/new/event_credentials2.png_large_1320x520.png';
 import eventCredentialsPlaceholder2 from '~/assets/new/event_credentials2.png_placeholder_33x13.png';
 
-import licenceManagerTexture from '~/assets/new/vqlicencemanager_1280x800.png';
-import licenceManagerTextureLarge from '~/assets/new/vqlicencemanager_2560x1600.png';
-import licenceManagerTexturePlaceholder from '~/assets/new/vqlicencemanager_32x20.png';
-
 import { Footer } from '~/components/footer';
 import config from '~/config.json';
 import { baseMeta } from '~/utils/meta';
@@ -176,7 +172,7 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
+      {/* <ProjectSummary
         id="project-4"
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
@@ -195,7 +191,7 @@ export const Home = () => {
             },
           ],
         }}
-      />
+      /> */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
