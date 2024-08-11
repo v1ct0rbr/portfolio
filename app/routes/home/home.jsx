@@ -172,26 +172,7 @@ export const Home = () => {
           ],
         }}
       />
-      {/* <ProjectSummary
-        id="project-4"
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={4}
-        title="Licence manager"
-        description="Development of a web app for licence manager. It is used to control the licences of software of the company. "
-        buttonText="View project"
-        buttonLink="/projects/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Licence manager',
-          textures: [
-            {
-              srcSet: `${licenceManagerTexture} 800w, ${licenceManagerTextureLarge} 1920w`,
-              placeholder: licenceManagerTexturePlaceholder,
-            },
-          ],
-        }}
-      /> */}
+
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
