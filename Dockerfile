@@ -16,7 +16,7 @@ RUN npm install
 # Exponha a porta em que a aplicação estará em execução
 EXPOSE 8788
 
-RUN npm run build
+
 
 # Comando para iniciar a aplicação
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "deploy"]
