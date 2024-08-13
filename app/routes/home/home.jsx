@@ -13,10 +13,6 @@ import eventCredentials2 from '~/assets/new/event_credentials2.png__660x260.png'
 import eventCredentialsLarge2 from '~/assets/new/event_credentials2.png_large_1320x520.png';
 import eventCredentialsPlaceholder2 from '~/assets/new/event_credentials2.png_placeholder_33x13.png';
 
-import licenceManagerTexture from '~/assets/new/vqlicencemanager_1280x800.png';
-import licenceManagerTextureLarge from '~/assets/new/vqlicencemanager_2560x1600.png';
-import licenceManagerTexturePlaceholder from '~/assets/new/vqlicencemanager_32x20.png';
-
 import { Footer } from '~/components/footer';
 import config from '~/config.json';
 import { baseMeta } from '~/utils/meta';
@@ -164,7 +160,7 @@ export const Home = () => {
         title="IT Service control"
         description="Development of a web app for service control. It is used to control the it services of the company like the servers, the computers, the network and the services. "
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/sosystem"
         model={{
           type: 'laptop',
           alt: 'deros app',
@@ -176,26 +172,7 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
-        id="project-4"
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={4}
-        title="Licence manager"
-        description="Development of a web app for licence manager. It is used to control the licences of software of the company. "
-        buttonText="View project"
-        buttonLink="/projects/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Licence manager',
-          textures: [
-            {
-              srcSet: `${licenceManagerTexture} 800w, ${licenceManagerTextureLarge} 1920w`,
-              placeholder: licenceManagerTexturePlaceholder,
-            },
-          ],
-        }}
-      />
+
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
