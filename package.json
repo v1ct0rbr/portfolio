@@ -26,6 +26,7 @@
     "isbot": "^4.1.0",
     "lucide-react": "^0.424.0",
     "miniflare": "^3.20231030.4",
+    "portfolio": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loading-skeleton": "^3.4.0",
